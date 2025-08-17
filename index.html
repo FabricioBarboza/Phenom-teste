@@ -1,2 +1,35 @@
-# Phenom-teste
-Infor-tec
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Loja TechMix</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="topo">
+    <h1>TechMix</h1>
+    <div class="nav">
+      <a href="index.html">Loja</a>
+      <a href="carrinho.html">Carrinho 🛒</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <aside class="sidebar">
+    <h2>Categorias</h2>
+    <ul id="categorias">
+      <li onclick="filtrarCategoria('Todos')">Todos</li>
+      <li onclick="filtrarCategoria('Celular')">Celular</li>
+      <li onclick="filtrarCategoria('Computador')">Computador</li>
+      <li onclick="filtrarCategoria('Videogame')">Videogame</li>
+    </ul>
+  </aside>
+
+  <section class="produtos-container" id="produtos"></section>
+</main>
+
+<script src="script.js"></script>
+</body>
+  </html>
