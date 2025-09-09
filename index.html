@@ -2,34 +2,62 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Loja TechMix</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art Tat</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="topo">
-    <h1>TechMix</h1>
-    <div class="nav">
-      <a href="index.html">Loja</a>
-      <a href="carrinho.html">Carrinho 🛒</a>
+
+<!-- Topo -->
+<header class="topo">
+    <div class="logo">
+        <img src="img/logo.jpg" alt="logo">
     </div>
-  </div>
+    <h2 class="nomelogo">Art Tat</h2>
+    <nav class="pagina">
+        <a href="index.html">LOJA</a>
+        <a href="carrinho.html">CARRINHO</a>
+    </nav>
+    <button class="menu-btn" onclick="abrirSidebar()">☰</button>
 </header>
 
-<main>
-  <aside class="sidebar">
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar">
+    <button class="fechar-btn" onclick="fecharSidebar()">×</button>
     <h2>Categorias</h2>
     <ul id="categorias">
-      <li onclick="filtrarCategoria('Todos')">Todos</li>
-      <li onclick="filtrarCategoria('Celular')">Celular</li>
-      <li onclick="filtrarCategoria('Computador')">Computador</li>
-      <li onclick="filtrarCategoria('Videogame')">Videogame</li>
+        <li onclick="filtrarCategoria('Todos')">Todos</li>
+        <li onclick="filtrarCategoria('topo_de_bolo_3d')">Topo de Bolo 3D</li>
+        <li onclick="filtrarCategoria('topo_de_bolo_simples')">Topo de Bolo Simples</li>
+        <li onclick="filtrarCategoria('agendas_personalizada')">Agendas Personalizadas</li>
     </ul>
-  </aside>
+</aside>
 
-  <section class="produtos-container" id="produtos"></section>
+<!-- Produtos -->
+<main>
+    <section class="produtos-container" id="produtos"></section>
 </main>
 
+<!-- Footer -->
+<footer>
+    <p>Siga-nos nas redes sociais:</p>
+    <a href="#">Instagram</a> |
+    <a href="#">Facebook</a> |
+    <a href="#">WhatsApp</a>
+    <p>Desenvolvido por Você</p>
+</footer>
+
+<!-- Botão flutuante do carrinho -->
+<a href="carrinho.html" class="botao-flutuante-carrinho">🛒</a>
+
 <script src="script.js"></script>
+<script>
+function abrirSidebar() {
+    document.getElementById('sidebar').style.transform = 'translateX(0)';
+}
+function fecharSidebar() {
+    document.getElementById('sidebar').style.transform = 'translateX(-100%)';
+}
+</script>
 </body>
-  </html>
+</html>
